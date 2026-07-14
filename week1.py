@@ -12,6 +12,14 @@ print(y)
 model = keras.Sequential()
 model.add(layers.Input(shape = (2,) )) #evry neuron recives 2 inputs
 model.add(layers.Dense(1 , activation = 'sigmoid' ))                                                                                                           
+model.summary()
+
+#compile
+model.compile( loss='mse' ,  
+    optimizer = keras.optimizers.SGD(learning_rate = 0.1))
+
+
+
 
 
 print("Hello World")
