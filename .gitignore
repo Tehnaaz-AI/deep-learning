@@ -1,0 +1,7 @@
+cifar-10/
+*.7z
+*.zip
+*.tar
+*.tar.gz
+*.gz
+*.rar
