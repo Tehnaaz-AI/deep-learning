@@ -11,7 +11,7 @@ plt.imshow(X_train[0])
 print(Y_train[0])
 plt.show()
 
-"""
+
 #Build the Architecture (MLP)
 model = keras.Sequential()
 model.add(Flatten(input_shape = (28,28)))
@@ -29,7 +29,7 @@ model.fit(X_train,
           epochs = 10,
           batch_size = 64
           )
-"""
+
 # Task : Improve the train accuracy
 # Try : Add more layers
 

@@ -6,7 +6,7 @@ from tensorflow.keras import layers
 x = np.array([[0,0],[0,1],[1,0],[1,1]])
 #print(x)
 y = np.array([[0],[0],[0],[1]])
-print(y)
+# print(y)
 
 # Build the Architecture
 model = keras.Sequential()
