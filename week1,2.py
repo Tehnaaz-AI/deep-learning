@@ -1,3 +1,5 @@
+# Write a Python program to implement a single layer neural network to learn the AND gate using Keras.
+
 import numpy as np
 from tensorflow import keras
 from tensorflow.keras import layers

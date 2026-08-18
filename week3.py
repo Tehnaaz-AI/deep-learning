@@ -1,3 +1,5 @@
+# Write a Python program to build and train a neural network using Keras.
+
 from tensorflow import keras
 from tensorflow.keras.layers import Dense,Flatten 
 from tensorflow.keras.datasets import mnist

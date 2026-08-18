@@ -88,15 +88,29 @@ model = cifar10_CNN()
 criterion = nn.CrossEntropyLoss()
 optimizer = torch.optim.Adam(model.parameters(), lr = 0.0001)
 
-for image, label in train_loader:
-    predicted = model(image)
-    loss = criterion(predicted, label)
-    loss.backward()
-    optimizer.step()
-    optimizer.zero_grad()
+for epoch in range(10):
 
-    print(f"Loss: {loss.item()}")
+    for image, label in train_loader:
+        predicted = model(image)
+        loss = criterion(predicted, label)
+        loss.backward()
+        optimizer.step()
+        optimizer.zero_grad()
 
+        print(f"Loss: {loss.item()}")
+
+    # model evaluation
+    correct = 0
+    total = 0
+    with torch.no_grad():
+        for image, label in test_loader:
+            predicted = model(image)
+            max_prob , predicted_class = torch.max(predicted.data, 1)
+            total += label.size(0)
+            correct += (predicted_class == label).sum().item()
+
+    Accuracy = (correct/total) * 100
+    print(f"Accuracy: {Accuracy}%")
 
 
 
