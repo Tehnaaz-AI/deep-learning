@@ -5,3 +5,5 @@ cifar-10/
 *.tar.gz
 *.gz
 *.rar
+
+data/
