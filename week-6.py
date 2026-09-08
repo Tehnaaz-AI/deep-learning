@@ -47,6 +47,8 @@ test_loader = DataLoader(
         
 model = models.resnet18(weights=models.ResNet18_Weights.DEFAULT)
 print(model)
+
+
 """
 
 
